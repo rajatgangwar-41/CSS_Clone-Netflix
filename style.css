@@ -1,0 +1,554 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --bg-color: black;
+  --text-color: #fff;
+  --main-color: #514e61;
+
+  --h1-font: 3rem;
+  --p-font: 1rem;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.bg-image {
+  border: 5px solid red;
+  background: cyan;
+  position: absolute;
+  width: 100vw;
+  height: 75vh;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background-clip: border-box;
+  background-origin: padding-box;
+  border-bottom: 8px solid rgb(35, 35, 35);
+}
+/* .bg-gradient {
+  position: absolute;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  background: rgb(0 0 0 / 40%);
+} */
+
+.bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header {
+  position: absolute;
+  padding: 25px 200px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.logo {
+  width: 10rem;
+  height: 2.5rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-right: 10px;
+}
+
+.language-btn {
+  font-size: var(--p-font);
+  background: rgba(22, 22, 22, 0.7);
+  border: 1px solid rgba(128, 128, 128, 0.7);
+  border-radius: 4px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+select {
+  background-color: transparent;
+  color: var(--text-font);
+  border: none;
+  height: 2rem;
+  font-size: var(--p-font);
+  appearance: none;
+}
+
+.sign-in-btn {
+  background-color: rgb(229, 9, 20);
+  border: 0.0625rem solid rgba(0, 0, 0, 0);
+  border-radius: calc(0.25rem - 0.0625rem);
+  font-size: 14px;
+  font-weight: 700;
+  height: 2rem;
+  text-align: center;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.sign-in-btn:hover {
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  background: rgb(193, 17, 25);
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+  margin-top: 120px;
+}
+
+.main-content p {
+  font-size: var(--h1-font);
+  font-weight: 1000;
+  margin: 0 8px 25px 0;
+}
+
+.main-content h5:nth-child(2) {
+  font-weight: unset;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+
+.main-content h5:nth-child(3) {
+  font-weight: unset;
+  font-size: 1.28rem;
+  text-align: center;
+  margin: 30px 0 25px 0;
+}
+
+.main-content .buttons {
+  margin: 0 150px;
+  position: relative;
+}
+
+.main-content .buttons input {
+  width: 360px;
+  height: 60px;
+  background: rgba(22, 22, 22, 0.7);
+  border: 1px solid rgb(229, 9, 20);
+  border-radius: 4px;
+}
+
+.main-content .buttons input:focus {
+  outline: 1px solid white;
+  outline-offset: 3px;
+}
+
+.main-content .buttons input::placeholder {
+  padding: 10px 10px;
+  font-size: var(--p-font);
+}
+
+.main-content .buttons button {
+  width: 230px;
+  height: 60px;
+  margin: 0 0 0 10px;
+  position: absolute;
+  bottom: 0;
+  background: rgb(229, 9, 20);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.main-content .buttons button:hover {
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  background: rgb(193, 17, 25);
+}
+
+.main-content .buttons button i {
+  position: relative;
+  font-size: 2rem;
+  font-weight: initial;
+  top: 5%;
+}
+
+article > div {
+  position: relative;
+  width: 100%;
+  height: 73vh;
+  border-bottom: 8px solid rgb(35, 35, 35);
+}
+
+article > div:nth-child(n) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article > div:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+article > div > .text {
+  width: 50vw;
+  height: 100%;
+  border: none;
+}
+
+article > div > .image {
+  width: 50vw;
+  height: 100%;
+  border: none;
+}
+
+/* Section 1 */
+article .section1 img {
+  width: 85%;
+  height: 90%;
+  padding: 60px 30px 0 0;
+}
+
+article .section1 .text {
+  padding: 260px 0 260px 200px;
+}
+
+article .section1 .text h1 {
+  font-size: var(--h1-font);
+  font-weight: 1000;
+  margin-bottom: 18px;
+}
+
+article .section1 .text h5 {
+  font-size: 1.5rem;
+  font-weight: unset;
+  margin-bottom: 20px;
+  max-width: 38vw;
+  line-height: 2rem;
+}
+
+article .section1 .image video {
+  position: absolute;
+  width: 27vw;
+  height: 50%;
+  top: 140px;
+  right: 290px;
+  z-index: -1;
+}
+
+/* Section 2 */
+article .section2 .image > img {
+  width: 85%;
+  height: 90%;
+  object-position: left 180px top 40px;
+}
+
+article .section2 .text {
+  padding: 235px 0 235px 5px;
+}
+
+article .section2 .text h1 {
+  font-size: var(--h1-font);
+  font-weight: 1000;
+  margin-bottom: 15px;
+  max-width: 70%;
+  line-height: 4rem;
+  letter-spacing: 2px;
+}
+
+article .section2 .text h5 {
+  font-size: 1.5rem;
+  font-weight: unset;
+  margin-bottom: 20px;
+  max-width: 38vw;
+  line-height: 2rem;
+}
+
+article .section2 .image .animation {
+  position: absolute;
+  width: 22vw;
+  height: 11vh;
+  bottom: 100px;
+  left: 365px;
+  z-index: 1;
+  border: 2px solid rgba(128, 128, 128, 0.7);
+  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  padding: 8px 12px;
+}
+
+article .section2 .image .animation > div:nth-child(2) {
+  padding: 20px 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25rem;
+}
+
+article .section2 .image .animation > div:nth-child(2) > div {
+  color: #0071eb;
+  font-size: 14px;
+  font-weight: initial;
+}
+
+article .section2 .image .animation > img:nth-child(3) {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin: 20px 0 20px 110px;
+}
+
+/* Section 3 */
+article .section3 img {
+  width: 85%;
+  height: 90%;
+  padding: 60px 30px 0 0;
+}
+
+article .section3 .text {
+  padding: 260px 0 260px 200px;
+}
+
+article .section3 .text h1 {
+  font-size: var(--h1-font); /* margin-left: 400px; */
+
+  font-weight: 1000;
+  margin-bottom: 18px;
+}
+
+article .section3 .text h5 {
+  font-size: 1.5rem;
+  font-weight: unset;
+  margin-bottom: 20px;
+  max-width: 38vw;
+  line-height: 2rem;
+}
+
+article .section3 .image video {
+  position: absolute;
+  width: 25vw;
+  height: 50%;
+  top: 60px;
+  right: 320px;
+  z-index: -1;
+}
+
+/* Section 4 */
+article .section4 .image > img {
+  margin: 20px 0 20px 180px;
+  width: 80%;
+  height: 80%;
+  object-position: left 10px top 40px;
+}
+
+article .section4 .text {
+  padding: 235px 0 235px 5px;
+}
+
+article .section4 .text h1 {
+  font-size: var(--h1-font);
+  font-weight: 1000;
+  margin-bottom: 15px;
+  max-width: 70%;
+  line-height: 4rem;
+  letter-spacing: 2px;
+}
+
+article .section4 .text h5 {
+  font-size: 1.5rem;
+  font-weight: unset;
+  margin-bottom: 20px;
+  max-width: 38vw;
+  line-height: 2rem;
+}
+
+/* FAQ */
+.FAQ {
+  position: relative;
+  width: 100%;
+  height: 96vh;
+  border-bottom: 8px solid rgb(35, 35, 35);
+}
+
+.FAQ .header {
+  font-size: 3rem;
+  font-weight: 1000;
+  margin: 60px 0 18px;
+  padding: 10px;
+  text-align: center;
+}
+
+.FAQ .question {
+  background: rgb(45, 45, 45);
+  padding: 1.5rem 1.5rem;
+  margin: 0 auto 10px;
+  width: 78vw;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.FAQ .question i {
+  font-size: 44px;
+  text-align: end;
+}
+
+/* FAQ-SignUp */
+.FAQ .sign-up {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.FAQ .sign-up h5 {
+  font-weight: unset;
+  font-size: 1.28rem;
+  text-align: center;
+  margin: 30px 0 25px 0;
+}
+
+.FAQ .sign-up .buttons {
+  margin: 0 250px 150px 0;
+  position: relative;
+}
+
+.FAQ .sign-up .buttons input {
+  width: 360px;
+  height: 60px;
+  background: rgba(22, 22, 22, 0.7);
+  border: 1px solid rgb(229, 9, 20);
+  border-radius: 4px;
+}
+
+.FAQ .sign-up .buttons input:focus {
+  outline: 1px solid white;
+  outline-offset: 3px;
+}
+
+.FAQ .sign-up .buttons input::placeholder {
+  padding: 10px 10px;
+  font-size: var(--p-font);
+}
+
+.FAQ .sign-up .buttons button {
+  width: 230px;
+  height: 60px;
+  margin: 0 0 0 10px;
+  position: absolute;
+  bottom: 0;
+  background: rgb(229, 9, 20);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.FAQ .sign-up .buttons button:hover {
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  background: rgb(193, 17, 25);
+}
+
+.FAQ .sign-up .buttons button i {
+  position: relative;
+  font-size: 2rem;
+  font-weight: initial;
+  top: 5%;
+}
+
+/* Footer */
+footer {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 65px 200px 0;
+  height: 44vh;
+  font-weight: 400;
+}
+
+footer .call {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration-line: underline;
+}
+
+footer .grid {
+  display: grid;
+  width: 80vw;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 1.5rem;
+}
+
+footer .grid a {
+  font-size: 0.8rem;
+}
+
+footer .language-btn {
+  font-size: var(--p-font);
+  width: fit-content;
+  background: rgba(22, 22, 22, 0.7);
+  border: 1px solid rgba(128, 128, 128, 0.7);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 1.5rem;
+}
+
+footer select {
+  background-color: transparent;
+  color: var(--text-font);
+  border: none;
+  height: 2rem;
+  font-size: var(--p-font);
+  appearance: none;
+}
+
+footer .netflix {
+  font-size: 0.9rem;
+}
